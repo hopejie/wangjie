@@ -1,0 +1,28 @@
+    #include <iostream>  
+    using namespace std;  
+    bool f[1010];  
+    int main()  
+    {  
+        int ans= 0;  
+        for(int i= 3; i<= 1000; i+= 3)  
+        {  
+            f[i]= !f[i];  
+        }  
+        for(int i= 5; i<= 1000; i+= 5)  
+        {  
+            f[i]= !f[i];  
+        }  
+        for(int i= 7; i<= 1000; i+= 7)  
+        {  
+            f[i]= !f[i];  
+        }  
+        for (int i= 1; i <= 1000; ++i)  
+        {  
+            if (!f[i])  
+            {  
+                ++ans;  
+            }  
+        }  
+        cout << ans << endl;  
+        return 0;  
+    }  
